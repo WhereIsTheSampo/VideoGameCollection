@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{19A667
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VGC.DomainModel", "VGC.DomainModel\VGC.DomainModel.csproj", "{1C762E80-01A2-48A9-A822-499569F5C4EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VGC.DataAccess", "VGC.DataAccess\VGC.DataAccess.csproj", "{8D2D1990-CA5D-4A5C-BF42-31DDB984E13D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +30,14 @@ Global
 		{8AAB8E84-6CCD-49A8-ABEF-9511F25E8F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AAB8E84-6CCD-49A8-ABEF-9511F25E8F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AAB8E84-6CCD-49A8-ABEF-9511F25E8F8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C762E80-01A2-48A9-A822-499569F5C4EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C762E80-01A2-48A9-A822-499569F5C4EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C762E80-01A2-48A9-A822-499569F5C4EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C762E80-01A2-48A9-A822-499569F5C4EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D2D1990-CA5D-4A5C-BF42-31DDB984E13D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D2D1990-CA5D-4A5C-BF42-31DDB984E13D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D2D1990-CA5D-4A5C-BF42-31DDB984E13D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D2D1990-CA5D-4A5C-BF42-31DDB984E13D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
