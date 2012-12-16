@@ -17,6 +17,9 @@ namespace VGC.Website
         {
             Mapper.CreateMap<Game, GameDto>()
                 .ForAllMembers(opt => opt.NullSubstitute(String.Empty));
+
+            Mapper.CreateMap<Company, CompanyDto>()
+                .ForAllMembers(opt => opt.NullSubstitute(String.Empty));
         }
     }
 }

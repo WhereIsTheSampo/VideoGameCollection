@@ -28,7 +28,8 @@ namespace VGC.Website
             AuthConfig.RegisterAuth();
 
             AutoMapperConfiguration.Configure();
-            Database.SetInitializer(new DropCreateSeedDatabaseAlways());
+            //Database.SetInitializer(new DropCreateSeedDatabaseAlways());
+            Database.SetInitializer(new DropCreateSeedDatabaseIfModelChanges());
         }
     }
 }
