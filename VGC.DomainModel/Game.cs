@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VGC.DomainModel
 {
@@ -19,9 +16,11 @@ namespace VGC.DomainModel
         // Foreign Keys
         public Int32 PlatformId { get; set; }
         public Int32 LabelId { get; set; }
+        public Int32 CompanyId { get; set; }
 
         // Navigation Properties
         public virtual Platform Platform { get; set; }
         public virtual Label Label { get; set; }
+        public virtual Company Company { get; set; }
     }
 }

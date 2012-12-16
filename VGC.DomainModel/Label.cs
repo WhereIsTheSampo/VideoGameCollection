@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VGC.DomainModel
 {
@@ -19,5 +16,6 @@ namespace VGC.DomainModel
 
         // Navigation Properties
         public virtual Platform Platform { get; set; }
+        public virtual IList<Game> Games { get; set; }
     }
 }
