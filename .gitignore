@@ -161,3 +161,4 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+/VGC.Website/App_Data/VGC.DataAccess.EFDataContext_log.ldf

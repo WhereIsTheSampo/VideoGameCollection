@@ -171,6 +171,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PlatformController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -178,6 +179,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\CompanyDto.cs" />
     <Compile Include="Models\GameDto.cs" />
+    <Compile Include="Models\PlatformDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -284,9 +286,6 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\IndexOriginal.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -297,6 +296,14 @@
     <Content Include="Views\Company\Create.cshtml" />
     <Content Include="Views\Company\Edit.cshtml" />
     <Content Include="Views\Company\Delete.cshtml" />
+    <Content Include="Views\Platform\Index.cshtml" />
+    <Content Include="Views\Platform\Details.cshtml" />
+    <Content Include="Views\Platform\Create.cshtml" />
+    <Content Include="Views\Platform2\Index.cshtml" />
+    <Content Include="Views\Platform2\Details.cshtml" />
+    <Content Include="Views\Platform2\Create.cshtml" />
+    <Content Include="Views\Platform2\Edit.cshtml" />
+    <Content Include="Views\Platform2\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

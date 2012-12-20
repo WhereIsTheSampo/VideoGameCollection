@@ -15,11 +15,15 @@ namespace VGC.Website
     {
         public static void Configure()
         {
+            Mapper.CreateMap<Company, CompanyDto>()
+                .ForAllMembers(opt => opt.NullSubstitute(String.Empty));
+
+            Mapper.CreateMap<Platform, PlatformDto>()
+                .ForAllMembers(opt => opt.NullSubstitute(String.Empty));
+
             Mapper.CreateMap<Game, GameDto>()
                 .ForAllMembers(opt => opt.NullSubstitute(String.Empty));
 
-            Mapper.CreateMap<Company, CompanyDto>()
-                .ForAllMembers(opt => opt.NullSubstitute(String.Empty));
         }
     }
 }
