@@ -37,22 +37,42 @@ namespace VGC.Engine
 
         public CompanyDto GetCompany(int id)
         {
-            throw new NotImplementedException();
+            var company = _context.Companies.Find(id);
+            var companyDto = Mapper.Map<Company, CompanyDto>(company);
+            return companyDto;
         }
 
-        public CompanyDto AddCompany(CompanyDto company)
+        public CompanyDto AddCompany(CompanyDto companyDto)
         {
-            throw new NotImplementedException();
+            var company = new Company
+            {
+                Name = companyDto.Name,
+                Notes = companyDto.Notes
+            };
+            var added = _context.Companies.Add(company);
+            _context.SaveChanges();
+
+            var addedDto = Mapper.Map<Company, CompanyDto>(added);
+            return addedDto;
         }
 
-        public void UpdateCompany(CompanyDto company)
+        public void UpdateCompany(CompanyDto companyDto)
         {
-            throw new NotImplementedException();
+            var company = _context.Companies.Find(companyDto.Id);
+            
+            company.Name = companyDto.Name;
+            company.Notes = companyDto.Notes;
+
+            _context.SaveChanges();
         }
 
         public void DeleteCompany(int id)
         {
-            throw new NotImplementedException();
+            var company = _context.Companies.Find(id);
+
+            _context.Companies.Remove(company);
+
+            _context.SaveChanges();
         }
     }
 }

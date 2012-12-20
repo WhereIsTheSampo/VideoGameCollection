@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 using VGC.Api;
@@ -10,12 +8,20 @@ namespace VGC.Website.Controllers
 {
     public class CompaniesController : Controller
     {
+        //===== FIELDS ========================================================
+
         private readonly ISiteApi _api;
+
+
+        //===== INITIALIZATION ================================================
 
         public CompaniesController(ISiteApi api)
         {
             _api = api;
         }
+
+
+        //===== ACTIONS =======================================================
 
         //
         // GET: /Companies/
@@ -24,7 +30,7 @@ namespace VGC.Website.Controllers
         {
             IList<CompanyDto> companies = _api.GetCompanies();
 
-            return View("Index", companies);
+            return View(companies);
         }
 
         //
@@ -32,12 +38,14 @@ namespace VGC.Website.Controllers
         //
         public ActionResult Details(int id)
         {
-            return View();
+            CompanyDto company = _api.GetCompany(id);
+
+            return View(company);
         }
 
         //
         // GET: /Companies/Create
-
+        //
         public ActionResult Create()
         {
             return View();
@@ -45,72 +53,63 @@ namespace VGC.Website.Controllers
 
         //
         // POST: /Companies/Create
-
+        //
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(CompanyDto company)
         {
-            try
-            {
-                // TODO: Add insert logic here
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            _api.AddCompany(company);
+
+            return RedirectToAction("Index");
         }
 
         //
         // GET: /Companies/Edit/5
-
-        public ActionResult Edit(int id)
+        //
+        public ActionResult Edit(Int32 id)
         {
-            return View();
+            CompanyDto company = _api.GetCompany(id);
+
+            return View(company);
         }
 
         //
         // POST: /Companies/Edit/5
-
+        //
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(Int32 id, CompanyDto company)
         {
-            try
-            {
-                // TODO: Add update logic here
+            if (id != company.Id)
+                throw new InvalidOperationException("IDs do not match");
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            _api.UpdateCompany(company);
+
+            return RedirectToAction("Index");
         }
 
         //
         // GET: /Companies/Delete/5
-
+        //
+        [Authorize]
         public ActionResult Delete(int id)
         {
-            return View();
+            CompanyDto company = _api.GetCompany(id);
+
+            return View(company);
         }
 
         //
         // POST: /Companies/Delete/5
-
+        //
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, CompanyDto company)
         {
-            try
-            {
-                // TODO: Add delete logic here
+            if (id != company.Id)
+                throw new InvalidOperationException("IDs do not match");
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            _api.DeleteCompany(id);
+
+            return RedirectToAction("Index");
         }
     }
 }

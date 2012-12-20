@@ -11,9 +11,9 @@ namespace VGC.Api
 
         CompanyDto GetCompany(Int32 id);
 
-        CompanyDto AddCompany(CompanyDto company);
+        CompanyDto AddCompany(CompanyDto companyDto);
 
-        void UpdateCompany(CompanyDto company);
+        void UpdateCompany(CompanyDto companyDto);
 
         void DeleteCompany(Int32 id);
     }
