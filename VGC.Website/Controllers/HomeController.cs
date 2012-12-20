@@ -4,29 +4,29 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-using AutoMapper;
-
-using VGC.DataAccess;
-using VGC.DomainModel;
-using VGC.Website.Models;
+//using VGC.Api;
+//using VGC.DataAccess;
+//using VGC.DomainModel;
+//using VGC.Website.Models;
 
 namespace VGC.Website.Controllers
 {
     public class HomeController : Controller
     {
-        EFDataContext _context;
+        //EFDataContext _context;
 
-        public HomeController()
-        {
-            _context = new EFDataContext();
-        }
+        //public HomeController()
+        //{
+        //    _context = new EFDataContext();
+        //}
 
         public ActionResult Index()
         {
-            var games = _context.Games.ToList();
-            var gameDtos = Mapper.Map<IList<Game>, IList<GameDto>>(games);
+            return RedirectToAction("Index", "Companies");
+            //var games = _context.Games.ToList();
+            //var gameDtos = Mapper.Map<IList<Game>, IList<GameDto>>(games);
 
-            return View(gameDtos);
+            //return View(gameDtos);
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace VGC.Website.Models
+namespace VGC.Api
 {
-    public class PlatformDto
+    public class CompanyDto
     {
         // Primary Key
         public Int32 Id { get; set; }
@@ -10,8 +10,5 @@ namespace VGC.Website.Models
         // Directly-Mapped Properties
         public String Name { get; set; }
         public String Notes { get; set; }
-
-        // Flattened Properties
-        public String CompanyName { get; set; }
     }
 }

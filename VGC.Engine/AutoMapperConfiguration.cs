@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 using AutoMapper;
 
+using VGC.Api;
 using VGC.DomainModel;
-using VGC.Website.Models;
 
-namespace VGC.Website
+namespace VGC.Engine
 {
     public static class AutoMapperConfiguration
     {
@@ -23,7 +23,6 @@ namespace VGC.Website
 
             Mapper.CreateMap<Game, GameDto>()
                 .ForAllMembers(opt => opt.NullSubstitute(String.Empty));
-
         }
     }
 }
