@@ -6,7 +6,7 @@ using VGC.Api;
 
 namespace VGC.Website.Controllers
 {
-    public class CompaniesController : Controller
+    public class PlatformsController : Controller
     {
         //===== FIELDS ========================================================
 
@@ -15,7 +15,7 @@ namespace VGC.Website.Controllers
 
         //===== INITIALIZATION ================================================
 
-        public CompaniesController(ISiteApi api)
+        public PlatformsController(ISiteApi api)
         {
             _api = api;
         }
@@ -24,27 +24,27 @@ namespace VGC.Website.Controllers
         //===== ACTIONS =======================================================
 
         //
-        // GET: /Companies/
+        // GET: /Platforms/
         //
         public ActionResult Index()
         {
-            IList<CompanyDto> companies = _api.GetCompanies();
+            IList<PlatformDto> platforms = _api.GetPlatforms();
 
-            return View(companies);
+            return View(platforms);
         }
 
         //
-        // GET: /Companies/Details/5
+        // GET: /Platforms/Details/5
         //
         public ActionResult Details(Int32 id)
         {
-            CompanyDto company = _api.GetCompany(id);
+            PlatformDto platform = _api.GetPlatform(id);
 
-            return View(company);
+            return View(platform);
         }
 
         //
-        // GET: /Companies/Create
+        // GET: /Platforms/Create
         //
         public ActionResult Create()
         {
@@ -52,61 +52,61 @@ namespace VGC.Website.Controllers
         }
 
         //
-        // POST: /Companies/Create
+        // POST: /Platforms/Create
         //
         [HttpPost]
-        public ActionResult Create(CompanyDto companyDto)
+        public ActionResult Create(PlatformDto platformDto)
         {
-            _api.AddCompany(companyDto);
+            _api.AddPlatform(platformDto);
 
             return RedirectToAction("Index");
         }
 
         //
-        // GET: /Companies/Edit/5
+        // GET: /Platforms/Edit/5
         //
         public ActionResult Edit(Int32 id)
         {
-            CompanyDto companyDto = _api.GetCompany(id);
+            PlatformDto platformDto = _api.GetPlatform(id);
 
-            return View(companyDto);
+            return View(platformDto);
         }
 
         //
-        // POST: /Companies/Edit/5
+        // POST: /Platforms/Edit/5
         //
         [HttpPost]
-        public ActionResult Edit(Int32 id, CompanyDto companyDto)
+        public ActionResult Edit(Int32 id, PlatformDto platformDto)
         {
-            if (id != companyDto.Id)
+            if (id != platformDto.Id)
                 throw new InvalidOperationException("IDs do not match");
 
-            _api.UpdateCompany(companyDto);
+            _api.UpdatePlatform(platformDto);
 
             return RedirectToAction("Index");
         }
 
         //
-        // GET: /Companies/Delete/5
+        // GET: /Platforms/Delete/5
         //
         [Authorize]
         public ActionResult Delete(Int32 id)
         {
-            CompanyDto companyDto = _api.GetCompany(id);
+            PlatformDto platformDto = _api.GetPlatform(id);
 
-            return View(companyDto);
+            return View(platformDto);
         }
 
         //
-        // POST: /Companies/Delete/5
+        // POST: /Platforms/Delete/5
         //
         [HttpPost]
-        public ActionResult Delete(Int32 id, CompanyDto company)
+        public ActionResult Delete(Int32 id, PlatformDto platform)
         {
-            if (id != company.Id)
+            if (id != platform.Id)
                 throw new InvalidOperationException("IDs do not match");
 
-            _api.DeleteCompany(id);
+            _api.DeletePlatform(id);
 
             return RedirectToAction("Index");
         }

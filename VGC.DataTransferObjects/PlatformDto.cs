@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace VGC.Api
+namespace VGC.DataTransferObjects
 {
     public class PlatformDto
     {

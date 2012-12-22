@@ -185,6 +185,7 @@
     <Compile Include="Controllers\Labels2Controller.cs" />
     <Compile Include="Controllers\PlatformController.cs" />
     <Compile Include="Controllers\Platforms2Controller.cs" />
+    <Compile Include="Controllers\PlatformsController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

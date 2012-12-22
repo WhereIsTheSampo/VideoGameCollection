@@ -42,6 +42,7 @@
     <Compile Include="CompanyDto.cs" />
     <Compile Include="GameDto.cs" />
     <Compile Include="ISiteApi.cs" />
+    <Compile Include="LabelDto.cs" />
     <Compile Include="PlatformDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
