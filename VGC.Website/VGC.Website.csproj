@@ -178,10 +178,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Companies2Controller.cs" />
     <Compile Include="Controllers\CompaniesController.cs" />
-    <Compile Include="Controllers\CompanyController.cs" />
+    <Compile Include="Controllers\Games2Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Labels2Controller.cs" />
     <Compile Include="Controllers\PlatformController.cs" />
+    <Compile Include="Controllers\Platforms2Controller.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -316,6 +319,26 @@
     <Content Include="Views\Companies\Create.cshtml" />
     <Content Include="Views\Companies\Edit.cshtml" />
     <Content Include="Views\Companies\Delete.cshtml" />
+    <Content Include="Views\Companies2\Index.cshtml" />
+    <Content Include="Views\Companies2\Details.cshtml" />
+    <Content Include="Views\Companies2\Create.cshtml" />
+    <Content Include="Views\Companies2\Edit.cshtml" />
+    <Content Include="Views\Companies2\Delete.cshtml" />
+    <Content Include="Views\Platforms2\Index.cshtml" />
+    <Content Include="Views\Platforms2\Details.cshtml" />
+    <Content Include="Views\Platforms2\Create.cshtml" />
+    <Content Include="Views\Platforms2\Edit.cshtml" />
+    <Content Include="Views\Platforms2\Delete.cshtml" />
+    <Content Include="Views\Labels2\Index.cshtml" />
+    <Content Include="Views\Labels2\Details.cshtml" />
+    <Content Include="Views\Labels2\Create.cshtml" />
+    <Content Include="Views\Labels2\Edit.cshtml" />
+    <Content Include="Views\Labels2\Delete.cshtml" />
+    <Content Include="Views\Games2\Index.cshtml" />
+    <Content Include="Views\Games2\Details.cshtml" />
+    <Content Include="Views\Games2\Create.cshtml" />
+    <Content Include="Views\Games2\Edit.cshtml" />
+    <Content Include="Views\Games2\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

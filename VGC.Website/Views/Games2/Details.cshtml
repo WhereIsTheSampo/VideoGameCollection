@@ -1,0 +1,57 @@
+﻿@model VGC.DomainModel.Game
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Game</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ManualUrl)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ManualUrl)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Notes)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Notes)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PlatformId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PlatformId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LabelId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LabelId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CompanyId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CompanyId)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

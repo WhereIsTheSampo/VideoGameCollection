@@ -22,7 +22,7 @@ namespace VGC.Website.Controllers
 
         public ActionResult Index()
         {
-            return RedirectToAction("Index", "Companies");
+            return RedirectToAction("Index", "Companies2");
             //var games = _context.Games.ToList();
             //var gameDtos = Mapper.Map<IList<Game>, IList<GameDto>>(games);
 
